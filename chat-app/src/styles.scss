@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+    font-family: Allura;
+    src: url(assets/fonts/Allura-Regular.otf) format("opentype");
+  }
+  @font-face {
+    font-family: Dancing;
+    src: url(assets/fonts/DancingScript-Regular.otf) format("opentype");
+  }
+  @font-face {
+    font-family: AlexB;
+    src: url(assets/fonts/AlexBrush-Regular.ttf) format("opentype");
+  }
+  @font-face {
+    font-family: blackjack;
+    src: url(assets/fonts/blackjack.otf) format("opentype");
+  }
+  @font-face {
+    font-family: kaushan;
+    src: url(assets/fonts/KaushanScript-Regular.otf) format("opentype");
+  }

@@ -1,0 +1,34 @@
+<div class="container-fluid login-background">
+    <div class="register-box">
+        <div class="card">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="card-body">
+                    <h1 class="howdy">HowDy!</h1>
+                    <mat-form-field class="w-75">
+                        <input matInput placeholder="Email" type="email" formControlName="email">
+                    </mat-form-field>
+
+                    <mat-form-field class="w-75">
+                        <input matInput placeholder="Password" type="password" formControlName="password">
+                    </mat-form-field>
+
+                    <button class="sign-up" mat-button type="submit">Log In</button>
+                    <span style="margin-left: auto; width:80%">
+                        <p style="margin-top:35px; font-size: 14px; color: blue">Forgot password</p>
+                        <p style="margin-top:-15px;">
+                            Don't have an account? <span style="font-weight: 550; color: blue;">
+                                <a [routerLink]="['/register']">Sign up</a></span>
+
+                        </p>
+
+                    </span>
+
+
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+
+</div>

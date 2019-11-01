@@ -1,0 +1,87 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="loggedInUserNav">
+                <div class="row">
+                    <div class="col-md-3">
+                        Image
+                    </div>
+                    <div class="col-md-6">
+                        {{userDetails.userName}}
+                    </div>
+                    <div class="col-md-3">
+                        <p (click)="signOut()" class="cursor">sign out</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="search-bar col-md-12">
+                <p>Search bar</p>
+            </div>
+            <span *ngFor="let user of usersArray">
+                <div class="loggedInUserNav col-md-12" *ngIf="user.userId != userDetails.userId">
+                    <div class="row" (click)="userSelected(user)">
+                        <div class="col-md-3 user-name">
+
+                        </div>
+                        <div class="col-md-8 user-name">
+                            <h5>{{user.userName}}</h5>
+                            <p>{{user.email}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            </span>
+        </div>
+        <div class="col-md-8">
+            <div class="loggedInUserNav row">
+
+                <div class="col-md-3">
+                    Image
+                </div>
+                <div class="col-md-6">
+                    {{selectedUserName}}
+                </div>
+                <div class="col-md-3">
+                    <!-- <p (click)="signOut()" class="cursor">sign out</p> -->
+                </div>
+
+
+
+            </div>
+            <div class="row chat-window">
+                <div *ngIf="usersChatMessage">
+                    <div *ngFor="let chat of usersChatMessage" style="margin-bottom: 10%; margin-top: 10%;">
+
+                        <span *ngIf="chat.senderId == loggedInUserId" class="you-msg-box"><strong>You:</strong>
+                            {{chat.chatMessage}}
+                        </span>
+
+
+                        <span *ngIf="chat.senderId != loggedInUserId"
+                            class="you-msg-box"><strong>{{selectedUserName}}:</strong>
+                            {{chat.chatMessage}}
+                        </span>
+
+
+                    </div>
+                </div>
+
+                <!-- Everything needs to be loaded from chat component in future -->
+                <!-- <app-chat></app-chat> -->
+            </div>
+            <div class="row message-box">
+                <div class="col-md-10">
+                    <mat-form-field class="example-full-width">
+                        <textarea matInput placeholder="Enter Message" [(ngModel)]="chatMessage"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-2">
+                    <button mat-button class="btn btn-primary " (click)="sendMessage()">Send</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
