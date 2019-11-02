@@ -25,7 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 var corsOptions = {
-  origin: 'http://localhost:4200',
+  origin: 'http://demochatapplication.s3-website.ap-south-1.amazonaws.com',
   allowedHeaders: ["Access-Control-Allow-Headers", "Origin, X-Requested-With, X-location, Content-Type, Accept, Cache-Control"],
   methods: 'GET,POST',
   preflightContinue: false,

@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http'
 import { Observable, of } from 'rxjs'
 import { map } from 'rxjs/operators'
 
-const base_url: string = `http://localhost:3000/`
+// const base_url: string = `http://localhost:3000/`
+const base_url: string = `http://ec2-35-154-109-203.ap-south-1.compute.amazonaws.com:3000/`
 
 @Injectable({
   providedIn: 'root'

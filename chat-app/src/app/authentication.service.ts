@@ -5,8 +5,8 @@ import { map } from 'rxjs/operators'
 import { Router } from '@angular/router'
 import * as io from 'socket.io-client';
 
-const base_url: string = `http://localhost:3000`
-
+// const base_url: string = `http://localhost:3000`
+const base_url: string = `http://ec2-35-154-109-203.ap-south-1.compute.amazonaws.com:3000`
 
 @Injectable()
 export class AuthenticationService {
